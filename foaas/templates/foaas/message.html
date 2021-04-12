@@ -1,0 +1,22 @@
+{% extends '../base.html' %}
+
+{% block title %}
+    Message for {{ name }}
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="jumbotron">
+            <blockquote class="blockquote text-center">
+                {{ message|safe }}
+
+                <small>
+                    <footer class="blockquote-footer">
+                        From <cite title="{{ sender }}">{{ sender }}</cite>
+                    </footer>
+                </small>
+            </blockquote>
+        </div>
+    </div>
+
+{% endblock content %}

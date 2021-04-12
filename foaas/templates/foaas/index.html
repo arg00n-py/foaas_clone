@@ -1,0 +1,32 @@
+{% extends '../base.html' %}
+
+{% block title %}Foass{% endblock title %}
+
+{% block content %}
+  <div class="container text-center">
+    <h3>-- <b>FOAAS</b> --</h3>
+    <p>Fuck Off As A Service</p>
+
+    <p>
+      How to use our awesome service :P<br/>
+      User the urls to get their messages. Replace the placeholders; name and sender.
+    </p> 
+
+    <table class="table table-bordered table-sm table-striped text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">URLs</th>
+          <th scope="col">Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for name, body in message_list %}
+          <tr>
+            <td>foaas/{{ name }}/:name/:sender</td>
+            <td>{{ body }} -from :sender</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}

@@ -22,7 +22,7 @@
       <tbody>
         {% for name, body in message_list %}
           <tr>
-            <td>foaas/{{ name }}/:name/:sender</td>
+            <td>foaas/{{ name }}/:name{% if pronoun %}/:pronoun{% endif %}/:sender</td>
             <td>{{ body }} -from :sender</td>
           </tr>
         {% endfor %}
